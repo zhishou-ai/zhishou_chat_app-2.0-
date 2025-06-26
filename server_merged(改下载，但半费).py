@@ -522,6 +522,10 @@ class ChatServer:
 
     async def handle_private_message(self, sender_id: int, message: dict):
         try:
+            sender_name = self.db.execute_query(
+                "SELECT username FROM users WHERE user_id = %s",
+                (sender_id,)
+            )
             receiver_id = message['receiver_id']
             response_to_sender = {
                 'action': 'new_private_message',
@@ -530,6 +534,8 @@ class ChatServer:
                     'sender_id': sender_id,
                     'receiver_id': receiver_id,
                     'content': message['content'],
+                    'timestamp': message['timestamp'],
+                    'sender_name': sender_name[0]['username'],
                     'direction': 'sent',
                     'content_type': message.get('content_type', 'text'),  # 添加内容类型
                     'file_url': message.get('file_url', '')  # 添加文件路径
@@ -543,6 +549,8 @@ class ChatServer:
                     'receiver_id': receiver_id,
                     'content': message['content'],
                     'direction': 'received',
+                    'timestamp': message['timestamp'],
+                    'sender_name': sender_name[0]['username'],
                     'content_type': message.get('content_type', 'text'),  # 添加内容类型
                     'file_url': message.get('file_url', '')  # 添加文件路径
                 }
