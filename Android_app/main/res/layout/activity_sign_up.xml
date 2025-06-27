@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sign_Up_Activity">
+
+    <!-- 背景框 -->
+
+    <!-- 标题 -->
+
+    <!-- 用户名填入框 -->
+
+    <TextView
+        android:id="@+id/sign_up_bg"
+        android:layout_width="328dp"
+        android:layout_height="495dp"
+        android:background="@drawable/sign_in_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.535"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/sign_up_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up_title"
+        android:textColor="@color/black"
+        android:textSize="19dp"
+
+        android:textStyle="bold"
+
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_bg"
+        app:layout_constraintVertical_bias="0.122" />
+
+
+    <!-- 密码填入框 -->
+
+
+    <!-- 确认密码输入框 -->
+
+
+    <!-- 注册按钮 -->
+
+    <EditText
+        android:id="@+id/SignUpUsername"
+        android:layout_width="203dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/sign_in_text_bg"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/sign_username"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/SignUpPassword"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_bg"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_bg"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_bg"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/SignUpPassword"
+        android:layout_width="203dp"
+        android:layout_height="41dp"
+        android:background="@drawable/sign_in_text_bg"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/sign_password"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_bg"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_bg"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_bg"
+        app:layout_constraintTop_toTopOf="@+id/sign_up_bg"
+        app:layout_constraintVertical_bias="0.431" />
+
+    <EditText
+        android:id="@+id/SignUpSepassword"
+        android:layout_width="203dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="137dp"
+        android:background="@drawable/sign_in_text_bg"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/second_password"
+        android:inputType="textPassword"
+        android:scrollbarSize="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_bg"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_bg"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_bg"
+        app:layout_constraintTop_toBottomOf="@+id/SignUpPassword"
+        app:layout_constraintVertical_bias="0.419" />
+
+    <Button
+        android:id="@+id/SignUpButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up_button"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_bg"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_bg"
+        app:layout_constraintHorizontal_bias="0.229"
+        app:layout_constraintStart_toStartOf="@+id/sign_up_bg"
+        app:layout_constraintTop_toBottomOf="@+id/SignUpPassword"
+        app:layout_constraintVertical_bias="0.805" />
+
+    <Button
+        android:id="@+id/to_SignInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="已有账户"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_up_bg"
+        app:layout_constraintEnd_toEndOf="@+id/sign_up_bg"
+        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintStart_toEndOf="@+id/SignUpButton"
+        app:layout_constraintTop_toBottomOf="@+id/SignUpPassword"
+        app:layout_constraintVertical_bias="0.805" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
